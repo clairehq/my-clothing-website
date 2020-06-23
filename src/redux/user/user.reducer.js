@@ -6,11 +6,12 @@ const userReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'SET_CURRENT_USER':
             return {
-                ...state,
-                currentUser: action.payload
+                ...state, //spreads out the properties in state ( name = {state.name})
+                currentUser: action.payload //user in user.actions
             }
 
-        default: return state;
+        default: 
+        return state;
     }
 }
 

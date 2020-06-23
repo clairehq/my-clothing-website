@@ -17,16 +17,18 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
+    //this setCurrentUser is bound to the store's dispatch() function
     const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
         if(userAuth) {
           const userRef = await createUserProfileDocument(userAuth);
 
+          //This snapshot represents the data stored in the firebase database and we can get it by call method given below:
           userRef.onSnapshot(snapShot => {
             setCurrentUser({
                 id: snapShot.id,
-                ...snapShot.data()
+                ...snapShot.data() //using the spread operator to spread all the value that we get
             });
           });
         } else {
@@ -36,6 +38,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
+    //unsubscribe
     this.unsubscribeFromAuth();
   }
 
@@ -53,8 +56,11 @@ class App extends React.Component {
   }
 }
 
-const mapDispatchToprops = dispatch => ({
+/* triggers state change */
+const mapDispatchToProps = dispatch => ({
+  /* dispatching actions to the reducers using dispatch() */
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(null, mapDispatchToprops)(App);
+/* 告诉redux这个component需要用到user actions里面的action */
+export default connect(null, mapDispatchToProps)(App);
