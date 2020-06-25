@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'; 
 
 import { auth } from '../../firebase/firebase.utils';
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart.dropdown.component';
 
 import { ReactComponent as Logo } from '../../asset/crown.svg';
 
 import './header.styles.scss';
 
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
     <div className='header'>
         <Link className='logo-container' to="/">
             <Logo className='logo' />
@@ -32,13 +34,19 @@ const Header = ({ currentUser }) => (
                     SIGN IN
                 </Link>
             }
+            <CartIcon /> 
         </div>
+        {
+            hidden ? null :
+            <CartDropdown /> // if hidden is true, render nothing, if is false, render CartDropdown component
+        }
     </div>
 )
 
 /* selecting the part of the data from the store that the connected component needs */
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser //state -> root reducer user -> user reducer currentUser -> payload -> user/userAuth
+const mapStateToProps = ({user: { currentUser }, cart: { hidden }}) => ({
+    currentUser, //state -> root reducer user -> user reducer currentUser -> payload -> user/userAuth
+    hidden
     /* Each key of the object you return will become a prop that gets passed to the component you're trying to connect which is Header component.  */
 });
 
