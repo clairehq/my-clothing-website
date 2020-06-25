@@ -15,7 +15,9 @@ const CartIcon = ({ toggleCartHidden }) => (
 );
 
 const mapDispatchToProps = dispatch => ({
+     /* dispatching actions to the reducers using dispatch() */
     toggleCartHidden: () => dispatch(toggleCartHidden())
 });
 
+/* 告诉redux这个component需要用到cart.actions里面的action */
 export default connect(null, mapDispatchToProps)(CartIcon);

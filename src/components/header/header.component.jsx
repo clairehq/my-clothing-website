@@ -37,8 +37,8 @@ const Header = ({ currentUser, hidden }) => (
             <CartIcon /> 
         </div>
         {
-            hidden ? null :
-            <CartDropdown /> // if hidden is true, render nothing, if is false, render CartDropdown component
+            hidden ? null 
+            : <CartDropdown /> // if hidden is true, render nothing, if is false, render CartDropdown component
         }
     </div>
 )
