@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 import { selectCartItemsCount } from '../../redux/cart/cart.selector';
@@ -21,8 +22,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 //updating number inside cart icon
-const mapStateToProps = state => ({
-    itemCount: selectCartItemsCount(state)
+const mapStateToProps = createStructuredSelector({
+    itemCount: selectCartItemsCount
 })
 
 /* 告诉redux这个component需要用到cart.actions里面的action */
