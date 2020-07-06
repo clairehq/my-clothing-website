@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage'; // local storage object in wind
 
 import userReducer from './user/user.reducer';
 import cartReducer from './cart/cart.reducer';
+import directoryReducer from './directory/directory.reducer';
 
 //JSON object that represent the possible configuration for redux persist to use
 const persistConfig = {
@@ -14,7 +15,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     user: userReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    directory: directoryReducer
 });
 
 //persisted rootReducer
