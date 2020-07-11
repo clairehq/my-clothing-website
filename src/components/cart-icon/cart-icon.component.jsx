@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => ({
 
 //updating number inside cart icon
 const mapStateToProps = createStructuredSelector({
-    itemCount: selectCartItemsCount
+    itemCount: selectCartItemsCount //state as argument
 })
 
 /* 告诉redux这个component需要用到cart.actions里面的action */
