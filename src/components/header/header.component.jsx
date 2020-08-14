@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 /* connect a given component in a way that allows it access to the store */
 import { connect } from 'react-redux'; 
@@ -14,37 +13,37 @@ import { selectCurrentUser } from '../../redux/user/user.selector';
 
 import { ReactComponent as Logo } from '../../asset/crown.svg';
 
-import './header.styles.scss';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './header.styles';
 
 const Header = ({ currentUser, hidden }) => (
-    <div className='header'>
-        <Link className='logo-container' to="/">
+    <HeaderContainer className='header'>
+        <LogoContainer to="/">
             <Logo className='logo' />
-        </Link>
-        <div className='options'>
-            <Link className='option' to='/shop'>
+        </LogoContainer>
+        <OptionsContainer>
+            <OptionLink to='/shop'>
                 SHOP
-            </Link>
-            <Link className='option' to='/shop'>
+            </OptionLink>
+            <OptionLink to='/shop'>
                 CONTACT
-            </Link>
+            </OptionLink>
             {
                 currentUser ?
-                <div className='option' onClick={()=> auth.signOut()}>
+                <OptionLink as='div' onClick={()=> auth.signOut()}>
                     SIGN OUT
-                 </div>
+                 </OptionLink>
                 :
-                <Link className='option' to='/signin'>
+                <OptionLink to='/signin'>
                     SIGN IN
-                </Link>
+                </OptionLink>
             }
             <CartIcon /> 
-        </div>
+        </OptionsContainer>
         {
             hidden ? null 
             : <CartDropdown /> // if hidden is true, render nothing, if is false, render CartDropdown component
         }
-    </div>
+    </HeaderContainer>
 )
 /*
 // selecting the part of the data from the store that the connected component needs

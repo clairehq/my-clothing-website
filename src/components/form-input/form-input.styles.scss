@@ -1,6 +1,7 @@
 $sub-color: grey;
 $main-color: black;
 
+//The @mixin directive lets you create CSS code that is to be reused throughout the website.
 @mixin shrinkLabel {
   top: -14px;
   font-size: 12px;

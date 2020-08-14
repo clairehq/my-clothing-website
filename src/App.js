@@ -68,7 +68,7 @@ const mapStateToProps = ({ user }) => ({
 */
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 })
 
 /* triggers state change */
