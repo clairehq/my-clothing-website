@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Claire Li - Works</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="preload" href="css/non-critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript><link rel="stylesheet" href="css/non-critical.css"></noscript>
+
+    <script>!function(w){"use strict";var loadCSS=function(href,before,media){function loadCB(){ss.addEventListener&&ss.removeEventListener("load",loadCB),ss.media=media||"all"}var ref,doc=w.document,ss=doc.createElement("link");if(before)ref=before;else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet",ss.href=href,ss.media="only x",function ready(cb){if(doc.body)return cb();setTimeout(function(){ready(cb)})}(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){for(var resolvedHref=ss.href,i=sheets.length;i--;)if(sheets[i].href===resolvedHref)return cb();setTimeout(function(){onloadcssdefined(cb)})};return ss.addEventListener&&ss.addEventListener("load",loadCB),(ss.onloadcssdefined=onloadcssdefined)(loadCB),ss};"undefined"!=typeof exports?exports.loadCSS=loadCSS:w.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon-144.jpg" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.jpg" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-ipad.jpg" />
+    <link rel="apple-touch-icon" sizes="167x167" href="img/apple-touch-icon-ipad-retina.jpg" />
+
+    <link rel="icon" type="img/png" href="img/favicon16.png" sizes="16x16" />
+	  <link rel="icon" type="img/png" href="img/favicon32.png" sizes="32x32" />
+    <link rel="icon" type="img/png" href="img/favicon96.png" sizes="96x96" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header id="header" class="headbar">
+  			<div class="container">
+  				<nav class="navbar">
+            <!-- Logo -->
+  					<div class="navbar-logo">
+  						<div class="logo">
+  							<a href="index.html">
+                  <img srcset="img/my-logo.png 2.5x" src="img/my-logo.png" alt="Claire Li">
+                </a>
+  						</div>
+  					</div>
+  					<!-- Navigation -->
+            <div class="topnav" id="navbar">
+              <a href="index.html#my-projects">Work</a>
+              <a href="about-me.html">About</a>
+              <!-- <a href="resume/resume.pdf">Resume</a> -->
+            </div>
+  				</nav>
+  			</div>
+  		</header>
+
+      <section class="work">
+        <div class="container">
+          <div class="banner project3">
+            <img src="img/projects/smartbrain-opt.png" alt="smartbrain banner">
+          </div>
+
+          <div class="work-section">
+            <h1>Smartbrain Face Detection</h1>
+
+            <ul class="row table">
+              <li class="col-md-6">
+                <p class="list-content">
+                  <span class="list-title">Date:</span>
+                  <span class="list-caption">May—June, 2020</span>
+                </p>
+              </li>
+              <li class="col-md-6">
+                <p class="list-content">
+                  <span class="list-title">My Role:</span>
+                  <span class="list-caption">Web developer</span>
+                </p>
+              </li>
+              <!-- <div class="w-100"></div> -->
+              <li class="col-md-6">
+                <p class="list-content">
+                  <span class="list-title">Type:</span>
+                  <span class="list-caption">Individual Project</span>
+                </p>
+              </li>
+              <li class="col-md-6">
+                <p class="list-content">
+                  <span class="list-title">Tools:</span>
+                  <span class="list-caption">VS Code, Git, SQL(TablePlus)</span>
+                </p>
+              </li>
+            </ul>
+
+            <h2>Project Description</h2>
+            <p>This project is a face detection website. The front-end is built with react and uses a free image recognition API. The website has its server, using node.js and express.js. It also has its own database that users can register, sign in, and sign out.</P>
+            
+            <h2>Project Process</h2>
+            <h3>build the website</h3>
+            <p class="special-para">First, I decided what components I need to built and then built the components using React framework and used React Router for the page routing. In order to make the face detection function work, I configured a free image recognization API through Clarifai Face Detection Model.</p>
+            <h3>connect the front-end with the back-end</h3>
+            <p class="special-para">After I built the website interface, I used node.js and express.js to set up a server that can communicate with the front-end. Finally, I created a database using TablePlus to memorize users' email and passwords.</p>
+            <div class="img-listing">
+              <a href="img/smartbrain/smartbrain-website.png">
+                <img src="img/smartbrain/smartbrain-opt.png" data-src="img/smartbrain/smartbrain-website.png" class="lazyload blur" alt="homepage image">
+                <noscript><img src="img/smartbrain/smartbrain-website.png" alt="homepage image"></noscript>
+              </a>
+            </div>
+            <div class="button">
+              <a href="https://clairehq.github.io/smartbrain/">Open the Website</a>
+            </div>
+
+            <h2>Reflection</h2>
+            <p> Through this project, my React coding skill gets improved. I learned how to build a complex website by dividing it into small reusable components. Moreover, I learned how to set up a server, how to create a database, and finally how to connect them to the front-end. Although I need more practice on the back-end skills, I became more familiar with making a website that users can interact with.</P>
+          </div>
+          <div id="end">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <script src="js/lazysizes.min.js"></script>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <p>Vancouver,BC</p>
+            <p>Beijing, China</p>
+          </div>
+          <div class="col-md-4">
+            <p>© 2019 | Claire Li</P>
+            <p class="footer-note">
+              <a href="style.html">styleguide</a>
+              /
+              <a href="https://github.com/clairehq/portfolio">github repo</a>
+            </p>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-icons">
+              <a href="https://twitter.com/claireli_hq?lang=en"><span class="fa fa-twitter"></span></a>
+              <a href="mailto:claireli.hq@gmail.com;"><span class="fa fa-envelope"></span></a>
+              <a href="https://www.youtube.com/channel/UCl3nWt5SBx3i8jefJsgy7vA?view_as=subscriber"><span class="fa fa-youtube"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
